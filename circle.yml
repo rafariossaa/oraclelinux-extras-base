@@ -30,15 +30,6 @@ jobs:
           command: |
             docker version
             docker info
-      - restore_cache:
-          keys:
-            - cache-{{ .Branch }}
-          paths:
-            - /cache/layers.tar
-      - save_cache:
-          key: cache-{{ .Branch }}-{{ epoch }}
-          paths:
-            - /cache/layers.tar
       - deploy:
           name: Publish docker image
           command: |
