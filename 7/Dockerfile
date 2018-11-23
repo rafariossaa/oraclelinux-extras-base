@@ -2,7 +2,7 @@ FROM oraclelinux:7-slim
 
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 ENV IMAGE_OS=ol-7
-ENV BITNAMI_IMAGE_VERSION=7-r121
+ENV BITNAMI_IMAGE_VERSION=7-r122
 
 COPY rootfs /
 
