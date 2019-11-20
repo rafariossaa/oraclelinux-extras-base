@@ -9,6 +9,6 @@ COPY rootfs /
 
 # component installation requirements
 RUN mkdir --parents /opt/bitnami
-RUN yum-config-manager --enable ol7_developer_EPEL ol7_optional_latest && \
-    yum upgrade -y && \
-    install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel which
+RUN install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel which oracle-epel-release-el7 && \
+    yum-config-manager --enable ol7_developer_EPEL ol7_optional_latest && \
+    yum upgrade -y
